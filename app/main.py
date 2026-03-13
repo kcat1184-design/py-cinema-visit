@@ -4,8 +4,16 @@ from app.people.customer import Customer
 from app.people.cinema_staff import Cleaner
 
 
-def cinema_visit(customers: None, hall_number: None,
-                 cleaner: None, movie: None) -> bool:
+def cinema_visit(
+    movie: str,
+    customers: list,
+    hall_number: int,
+    cleaner: str
+) -> None:
+
+    customers, hall_number, cleaner, movie = (movie,
+                                              customers, hall_number, cleaner)
+
     customer_list = []
 
     for cla in customers:
